@@ -12,8 +12,3 @@ def resizeImage(image, minWidth, maxWidth, defaultWidth):
     image = cv2.resize(image, (defaultWidth, defaultHeight))
     # 返回结果
     return image
-
-
-def threshold(image):
-    _, thresh = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
-    return thresh

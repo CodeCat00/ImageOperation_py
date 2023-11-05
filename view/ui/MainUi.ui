@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>MainUi</class>
-    <widget class="QMainWindow" name="MainUi">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>1920</width>
-                <height>1027</height>
-            </rect>
-        </property>
-        <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-            </sizepolicy>
-        </property>
-        <property name="windowTitle">
-            <string>ImageOperationModel</string>
-        </property>
-        <property name="styleSheet">
-            <string notr="true">
+ <class>MainUi</class>
+ <widget class="QMainWindow" name="MainUi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1728</width>
+    <height>1051</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>ImageOperationModel</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
 
                 QWidget {
                 background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #708090,stop:1 #C8C8D0);
@@ -187,393 +187,519 @@
                 }
 
             </string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <layout class="QVBoxLayout" name="openImageVerticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="openImageButtonHorizontalLayout">
+        <item>
+         <widget class="QPushButton" name="preImageButton">
+          <property name="text">
+           <string>上一张</string>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="openImageHorizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="nextImageButton">
+          <property name="text">
+           <string>下一张</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="openImageFileScroll">
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
         </property>
-        <widget class="QWidget" name="centralWidget">
-            <property name="enabled">
-                <bool>true</bool>
-            </property>
-            <property name="sizePolicy">
-                <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                </sizepolicy>
-            </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+        <widget class="QWidget" name="openImageFileScrollWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>840</width>
+           <height>894</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="openImageFileLabel">
             <property name="layoutDirection">
-                <enum>Qt::LeftToRight</enum>
+             <enum>Qt::LeftToRight</enum>
             </property>
-            <property name="autoFillBackground">
-                <bool>false</bool>
+            <property name="text">
+             <string/>
             </property>
-            <property name="inputMethodHints">
-                <set>Qt::ImhNone</set>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_5">
-                <item>
-                    <layout class="QVBoxLayout" name="openImageVerticalLayout">
-                        <item>
-                            <layout class="QHBoxLayout" name="openImageButtonHorizontalLayout">
-                                <item>
-                                    <widget class="QPushButton" name="preImageButton">
-                                        <property name="text">
-                                            <string>上一张</string>
-                                        </property>
-                                        <property name="autoRepeat">
-                                            <bool>false</bool>
-                                        </property>
-                                        <property name="autoDefault">
-                                            <bool>false</bool>
-                                        </property>
-                                        <property name="flat">
-                                            <bool>false</bool>
-                                        </property>
-                                    </widget>
-                                </item>
-                                <item>
-                                    <spacer name="openImageHorizontalSpacer">
-                                        <property name="orientation">
-                                            <enum>Qt::Horizontal</enum>
-                                        </property>
-                                        <property name="sizeHint" stdset="0">
-                                            <size>
-                                                <width>40</width>
-                                                <height>20</height>
-                                            </size>
-                                        </property>
-                                    </spacer>
-                                </item>
-                                <item>
-                                    <widget class="QPushButton" name="nextImageButton">
-                                        <property name="text">
-                                            <string>下一张</string>
-                                        </property>
-                                        <property name="flat">
-                                            <bool>false</bool>
-                                        </property>
-                                    </widget>
-                                </item>
-                            </layout>
-                        </item>
-                        <item>
-                            <widget class="QScrollArea" name="openImageFileScroll">
-                                <property name="layoutDirection">
-                                    <enum>Qt::LeftToRight</enum>
-                                </property>
-                                <property name="verticalScrollBarPolicy">
-                                    <enum>Qt::ScrollBarAsNeeded</enum>
-                                </property>
-                                <property name="horizontalScrollBarPolicy">
-                                    <enum>Qt::ScrollBarAsNeeded</enum>
-                                </property>
-                                <property name="widgetResizable">
-                                    <bool>true</bool>
-                                </property>
-                                <property name="alignment">
-                                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                </property>
-                                <widget class="QWidget" name="openImageFileScrollWidget">
-                                    <property name="geometry">
-                                        <rect>
-                                            <x>0</x>
-                                            <y>0</y>
-                                            <width>936</width>
-                                            <height>872</height>
-                                        </rect>
-                                    </property>
-                                    <property name="layoutDirection">
-                                        <enum>Qt::LeftToRight</enum>
-                                    </property>
-                                    <layout class="QHBoxLayout" name="horizontalLayout_4">
-                                        <item>
-                                            <widget class="QLabel" name="openImageFileLabel">
-                                                <property name="layoutDirection">
-                                                    <enum>Qt::LeftToRight</enum>
-                                                </property>
-                                                <property name="text">
-                                                    <string/>
-                                                </property>
-                                                <property name="alignment">
-                                                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                    </layout>
-                                </widget>
-                            </widget>
-                        </item>
-                    </layout>
-                </item>
-                <item>
-                    <widget class="QTabWidget" name="tabWidget">
-                        <property name="currentIndex">
-                            <number>0</number>
-                        </property>
-                        <widget class="QWidget" name="tabWidget1">
-                            <attribute name="title">
-                                <string>Tab1</string>
-                            </attribute>
-                            <layout class="QHBoxLayout" name="horizontalLayout_2">
-                                <item>
-                                    <widget class="QScrollArea" name="tabScrollArea1">
-                                        <property name="widgetResizable">
-                                            <bool>true</bool>
-                                        </property>
-                                        <widget class="QWidget" name="tabInnerWidget1">
-                                            <property name="geometry">
-                                                <rect>
-                                                    <x>0</x>
-                                                    <y>0</y>
-                                                    <width>896</width>
-                                                    <height>857</height>
-                                                </rect>
-                                            </property>
-                                            <layout class="QVBoxLayout" name="verticalLayout">
-                                                <item>
-                                                    <widget class="QLabel" name="tabLabel1">
-                                                        <property name="text">
-                                                            <string/>
-                                                        </property>
-                                                        <property name="alignment">
-                                                            <set>Qt::AlignCenter</set>
-                                                        </property>
-                                                    </widget>
-                                                </item>
-                                            </layout>
-                                        </widget>
-                                    </widget>
-                                </item>
-                            </layout>
-                        </widget>
-                        <widget class="QWidget" name="tabWidget2">
-                            <attribute name="title">
-                                <string>Tab2</string>
-                            </attribute>
-                            <layout class="QHBoxLayout" name="horizontalLayout_3">
-                                <item>
-                                    <widget class="QScrollArea" name="tabScrollArea2">
-                                        <property name="widgetResizable">
-                                            <bool>true</bool>
-                                        </property>
-                                        <widget class="QWidget" name="tabInnerWidget2">
-                                            <property name="geometry">
-                                                <rect>
-                                                    <x>0</x>
-                                                    <y>0</y>
-                                                    <width>51</width>
-                                                    <height>40</height>
-                                                </rect>
-                                            </property>
-                                            <layout class="QVBoxLayout" name="verticalLayout_2">
-                                                <item>
-                                                    <widget class="QLabel" name="tabLabel2">
-                                                        <property name="text">
-                                                            <string/>
-                                                        </property>
-                                                        <property name="alignment">
-                                                            <set>Qt::AlignCenter</set>
-                                                        </property>
-                                                    </widget>
-                                                </item>
-                                            </layout>
-                                        </widget>
-                                    </widget>
-                                </item>
-                            </layout>
-                        </widget>
-                        <widget class="QWidget" name="tabWidget3">
-                            <property name="focusPolicy">
-                                <enum>Qt::NoFocus</enum>
-                            </property>
-                            <attribute name="title">
-                                <string>Tab3</string>
-                            </attribute>
-                            <layout class="QHBoxLayout" name="horizontalLayout">
-                                <item>
-                                    <widget class="QScrollArea" name="scrollArea">
-                                        <property name="widgetResizable">
-                                            <bool>true</bool>
-                                        </property>
-                                        <widget class="QWidget" name="tabInnerWidget3">
-                                            <property name="geometry">
-                                                <rect>
-                                                    <x>0</x>
-                                                    <y>0</y>
-                                                    <width>51</width>
-                                                    <height>40</height>
-                                                </rect>
-                                            </property>
-                                            <layout class="QVBoxLayout" name="verticalLayout_3">
-                                                <item>
-                                                    <widget class="QLabel" name="tabLabel3">
-                                                        <property name="text">
-                                                            <string/>
-                                                        </property>
-                                                    </widget>
-                                                </item>
-                                            </layout>
-                                        </widget>
-                                    </widget>
-                                </item>
-                            </layout>
-                        </widget>
-                        <widget class="QWidget" name="tabWidget4">
-                            <attribute name="title">
-                                <string>Tab4</string>
-                            </attribute>
-                            <layout class="QHBoxLayout" name="horizontalLayout_6">
-                                <item>
-                                    <widget class="QScrollArea" name="scrollArea_2">
-                                        <property name="widgetResizable">
-                                            <bool>true</bool>
-                                        </property>
-                                        <widget class="QWidget" name="tabInnerWidget4">
-                                            <property name="geometry">
-                                                <rect>
-                                                    <x>0</x>
-                                                    <y>0</y>
-                                                    <width>51</width>
-                                                    <height>40</height>
-                                                </rect>
-                                            </property>
-                                            <layout class="QVBoxLayout" name="verticalLayout_4">
-                                                <item>
-                                                    <widget class="QLabel" name="tabLabel4">
-                                                        <property name="text">
-                                                            <string/>
-                                                        </property>
-                                                    </widget>
-                                                </item>
-                                            </layout>
-                                        </widget>
-                                    </widget>
-                                </item>
-                            </layout>
-                        </widget>
-                        <widget class="QWidget" name="tabWidget5">
-                            <attribute name="title">
-                                <string>Tab5</string>
-                            </attribute>
-                            <layout class="QHBoxLayout" name="horizontalLayout_7">
-                                <item>
-                                    <widget class="QScrollArea" name="scrollArea_3">
-                                        <property name="widgetResizable">
-                                            <bool>true</bool>
-                                        </property>
-                                        <widget class="QWidget" name="tabInnerWidget5">
-                                            <property name="geometry">
-                                                <rect>
-                                                    <x>0</x>
-                                                    <y>0</y>
-                                                    <width>51</width>
-                                                    <height>40</height>
-                                                </rect>
-                                            </property>
-                                            <layout class="QVBoxLayout" name="verticalLayout_5">
-                                                <item>
-                                                    <widget class="QLabel" name="label_3">
-                                                        <property name="text">
-                                                            <string/>
-                                                        </property>
-                                                    </widget>
-                                                </item>
-                                            </layout>
-                                        </widget>
-                                    </widget>
-                                </item>
-                            </layout>
-                        </widget>
-                    </widget>
-                </item>
-            </layout>
+           </widget>
+          </item>
+         </layout>
         </widget>
-        <widget class="QMenuBar" name="menuBar">
-            <property name="geometry">
-                <rect>
-                    <x>0</x>
-                    <y>0</y>
-                    <width>1920</width>
-                    <height>35</height>
-                </rect>
-            </property>
-            <widget class="QMenu" name="fileMenu">
-                <property name="title">
-                    <string>文件</string>
-                </property>
-                <addaction name="openAct"/>
-                <addaction name="saveAct"/>
-                <addaction name="openFilePathAct"/>
-                <addaction name="exitAct"/>
-            </widget>
-            <widget class="QMenu" name="opencvMenu">
-                <property name="title">
-                    <string>OpenCV</string>
-                </property>
-                <widget class="QMenu" name="image">
-                    <property name="title">
-                        <string>图像处理</string>
-                    </property>
-                    <addaction name="thresholdAct"/>
-                </widget>
-                <addaction name="image"/>
-            </widget>
-            <addaction name="fileMenu"/>
-            <addaction name="opencvMenu"/>
-        </widget>
-        <widget class="QToolBar" name="mainToolBar">
-            <attribute name="toolBarArea">
-                <enum>TopToolBarArea</enum>
-            </attribute>
-            <attribute name="toolBarBreak">
-                <bool>false</bool>
-            </attribute>
-        </widget>
-        <widget class="QStatusBar" name="statusBar"/>
-        <action name="openAct">
-            <property name="text">
-                <string>打开图片</string>
-            </property>
-            <property name="shortcut">
-                <string>Ctrl+O</string>
-            </property>
-        </action>
-        <action name="saveAct">
-            <property name="checkable">
-                <bool>false</bool>
-            </property>
-            <property name="enabled">
-                <bool>true</bool>
-            </property>
-            <property name="text">
-                <string>保存</string>
-            </property>
-            <property name="shortcut">
-                <string>Ctrl+S</string>
-            </property>
-        </action>
-        <action name="exitAct">
-            <property name="text">
-                <string>退出</string>
-            </property>
-            <property name="shortcut">
-                <string>Ctrl+Q</string>
-            </property>
-        </action>
-        <action name="openFilePathAct">
-            <property name="text">
-                <string>读取文件夹</string>
-            </property>
-        </action>
-        <action name="thresholdAct">
-            <property name="text">
-                <string>图像阈值</string>
-            </property>
-            <property name="iconText">
-                <string>图像阈值</string>
-            </property>
-        </action>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabWidget1">
+       <attribute name="title">
+        <string>Tab1</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QScrollArea" name="tabScrollArea1">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tabInnerWidget1">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>800</width>
+             <height>879</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="tabLabel1">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabWidget2">
+       <attribute name="title">
+        <string>Tab2</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QScrollArea" name="tabScrollArea2">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tabInnerWidget2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>51</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="tabLabel2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabWidget3">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <attribute name="title">
+        <string>Tab3</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tabInnerWidget3">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>51</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="tabLabel3">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabWidget4">
+       <attribute name="title">
+        <string>Tab4</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QScrollArea" name="scrollArea_2">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tabInnerWidget4">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>51</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="tabLabel4">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabWidget5">
+       <attribute name="title">
+        <string>Tab5</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QScrollArea" name="scrollArea_3">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tabInnerWidget5">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>51</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1728</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="openAct"/>
+    <addaction name="saveAct"/>
+    <addaction name="openFilePathAct"/>
+    <addaction name="exitAct"/>
+   </widget>
+   <widget class="QMenu" name="opencvMenu">
+    <property name="title">
+     <string>OpenCV</string>
+    </property>
+    <widget class="QMenu" name="image">
+     <property name="title">
+      <string>图像处理</string>
+     </property>
+     <addaction name="thresholdAct"/>
+     <addaction name="blurAct"/>
+     <addaction name="gaussianBlurAct"/>
+     <addaction name="medianBlurAct"/>
+     <addaction name="bilateralFilterAct"/>
+     <addaction name="morphologyExOpenAct"/>
+     <addaction name="morphologyExCloseAct"/>
+     <addaction name="morphologyExGradientAct"/>
+     <addaction name="morphologyExTophatAct"/>
+     <addaction name="morphologyExBlackhatAct"/>
+     <addaction name="sobelAct"/>
+     <addaction name="cannyAct"/>
+     <addaction name="dilateAct"/>
+     <addaction name="findContoursAct"/>
+     <addaction name="equalizeHistAct"/>
+     <addaction name="createCLAHEAct"/>
+     <addaction name="houghLinesAct"/>
     </widget>
-    <layoutdefault spacing="6" margin="11"/>
-    <resources>
-        <include location="../qrc/MainUi.qrc"/>
-    </resources>
-    <connections/>
+    <widget class="QMenu" name="menuopencv2">
+     <property name="title">
+      <string>opencv2</string>
+     </property>
+     <addaction name="houghCirclesAct"/>
+     <addaction name="watershedAct"/>
+     <addaction name="grabCutAct"/>
+     <addaction name="houghLinesPAct"/>
+    </widget>
+    <addaction name="image"/>
+    <addaction name="menuopencv2"/>
+   </widget>
+   <addaction name="fileMenu"/>
+   <addaction name="opencvMenu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="openAct">
+   <property name="text">
+    <string>打开图片</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="saveAct">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="exitAct">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="openFilePathAct">
+   <property name="text">
+    <string>读取文件夹</string>
+   </property>
+  </action>
+  <action name="thresholdAct">
+   <property name="text">
+    <string>图像阈值</string>
+   </property>
+   <property name="iconText">
+    <string>图像阈值</string>
+   </property>
+  </action>
+  <action name="blurAct">
+   <property name="text">
+    <string>blurAct</string>
+   </property>
+  </action>
+  <action name="gaussianBlurAct">
+   <property name="text">
+    <string>gaussianBlurAct</string>
+   </property>
+  </action>
+  <action name="medianBlurAct">
+   <property name="text">
+    <string>medianBlurAct</string>
+   </property>
+  </action>
+  <action name="bilateralFilterAct">
+   <property name="text">
+    <string>bilateralFilterAct</string>
+   </property>
+  </action>
+  <action name="morphologyExOpenAct">
+   <property name="text">
+    <string>morphologyExOpenAct</string>
+   </property>
+  </action>
+  <action name="morphologyExCloseAct">
+   <property name="text">
+    <string>morphologyExCloseAct</string>
+   </property>
+  </action>
+  <action name="morphologyExGradientAct">
+   <property name="text">
+    <string>morphologyExGradientAct</string>
+   </property>
+  </action>
+  <action name="morphologyExTophatAct">
+   <property name="text">
+    <string>morphologyExTophatAct</string>
+   </property>
+  </action>
+  <action name="morphologyExBlackhatAct">
+   <property name="text">
+    <string>morphologyExBlackhatAct</string>
+   </property>
+  </action>
+  <action name="sobelAct">
+   <property name="text">
+    <string>sobelAct</string>
+   </property>
+  </action>
+  <action name="cannyAct">
+   <property name="text">
+    <string>cannyAct</string>
+   </property>
+  </action>
+  <action name="dilateAct">
+   <property name="text">
+    <string>dilateAct</string>
+   </property>
+  </action>
+  <action name="findContoursAct">
+   <property name="text">
+    <string>findContoursAct</string>
+   </property>
+  </action>
+  <action name="equalizeHistAct">
+   <property name="text">
+    <string>equalizeHistAct</string>
+   </property>
+  </action>
+  <action name="createCLAHEAct">
+   <property name="text">
+    <string>createCLAHEAct</string>
+   </property>
+  </action>
+  <action name="houghLinesAct">
+   <property name="text">
+    <string>houghLinesAct</string>
+   </property>
+  </action>
+  <action name="houghCirclesAct">
+   <property name="text">
+    <string>houghCirclesAct</string>
+   </property>
+  </action>
+  <action name="watershedAct">
+   <property name="text">
+    <string>watershedAct</string>
+   </property>
+  </action>
+  <action name="grabCutAct">
+   <property name="text">
+    <string>grabCutAct</string>
+   </property>
+  </action>
+  <action name="houghLinesPAct">
+   <property name="text">
+    <string>houghLinesPAct</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../qrc/MainUi.qrc"/>
+ </resources>
+ <connections/>
 </ui>
