@@ -11,7 +11,7 @@ class ImageFileModel:
 
     # 获取图片文件地址
     def getImageFile(self):
-        return self.index
+        return self.imageFiles[self.index]
 
     # 获取前一张图片地址
     def getNextImageFile(self):
@@ -23,6 +23,7 @@ class ImageFileModel:
 
     # 获取指定位置图片地址
     def getDiffPosPreImageFile(self, diffPos):
-        size = self.imageFiles.size()
-        self.index = (self.index + size + diffPos) / size
-        return self.index
+        size = len(self.imageFiles)
+        self.index = int((self.index + size + diffPos) % size)
+        print(self.index)
+        return self.imageFiles[self.index]

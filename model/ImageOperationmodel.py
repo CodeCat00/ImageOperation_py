@@ -13,3 +13,9 @@ class ImageOperationModel:
 
     def setImageModel(self, model):
         self.imageModel = model
+
+    def getImageFileModel(self):
+        return self.imageFileModel
+
+    def setImageFileModel(self, imageFileModel):
+        self.imageFileModel = imageFileModel
