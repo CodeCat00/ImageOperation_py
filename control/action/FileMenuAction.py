@@ -1,7 +1,7 @@
 import cv2
 from PySide6.QtWidgets import QFileDialog, QLabel, QStatusBar
 
-from control.convert.ImageConvert import cImage2QPixmap
+from control.convert.ImageConvert import cImageToQPixmap
 from control.file.FilePathManager import fetchFilePathModel
 from model.ImageOperationModel import ImageOperationModel
 from model.image.ImageModel import ImageModel
@@ -14,7 +14,7 @@ def openAct(model=ImageOperationModel, label=QLabel):
     # 读取图片
     imageModel = ImageModel(imageFile[0])
     # 显示图片
-    label.setPixmap(cImage2QPixmap(imageModel.showImage))
+    label.setPixmap(cImageToQPixmap(imageModel.showImage))
     # 保存图像
     model.setImageModel(imageModel)
 
@@ -38,7 +38,7 @@ def openFilePathAct(model=ImageOperationModel, label=QLabel):
     # 读取图像
     imageModel = ImageModel(imageFile)
     # 显示图片
-    label.setPixmap(cImage2QPixmap(imageModel.showImage))
+    label.setPixmap(cImageToQPixmap(imageModel.showImage))
     # 保存图像
     model.setImageModel(imageModel)
     # 保存图像文件模型

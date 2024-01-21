@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QLabel
 
-from control.convert.ImageConvert import cImage2QPixmap
+from control.convert.ImageConvert import cImageToQPixmap
 from model.ImageOperationModel import ImageOperationModel
 from model.image.ImageModel import ImageModel
 
@@ -12,7 +12,7 @@ def preImage(model=ImageOperationModel, label=QLabel):
     # 读取图像
     imageModel = ImageModel(imageFile)
     # 显示图片
-    label.setPixmap(cImage2QPixmap(imageModel.showImage))
+    label.setPixmap(cImageToQPixmap(imageModel.showImage))
     # 保存图片
     model.setImageModel(imageModel)
 
@@ -24,6 +24,6 @@ def nextImage(model=ImageOperationModel, label=QLabel):
     # 读取图像
     imageModel = ImageModel(imageFile)
     # 显示图片
-    label.setPixmap(cImage2QPixmap(imageModel.showImage))
+    label.setPixmap(cImageToQPixmap(imageModel.showImage))
     # 保存图片
     model.setImageModel(imageModel)
