@@ -21,8 +21,8 @@ class Window(QMainWindow):
         self.loadUi()
         # 关联槽函数
         self.fileMenuConnect()
-        self.opencvMenuConnect()
         self.buttonConnect()
+        self.colorAdjustmentMenuConnect()
 
     # 初始化属性
     def initAttribute(self):
@@ -35,15 +35,32 @@ class Window(QMainWindow):
 
     # 连接文件菜单处理方法
     def fileMenuConnect(self):
-        self.ui.openAct.triggered.connect(partial(openAct, self.model, self.ui.openImageFileLabel))
-        self.ui.saveAct.triggered.connect(partial(saveAct, self.model, self.ui.statusBar))
-        self.ui.openFilePathAct.triggered.connect(partial(openFilePathAct, self.model, self.ui.openImageFileLabel))
-        self.ui.exitAct.triggered.connect(QApplication.instance().quit)
+        self.ui.actionOpen.triggered.connect(partial(openAct, self.model, self.ui.openImageFileLabel))
+        self.ui.actionSave.triggered.connect(partial(saveAct, self.model, self.ui.statusBar))
+        self.ui.actionOpenFilePath.triggered.connect(partial(openFilePathAct, self.model, self.ui.openImageFileLabel))
+        self.ui.actionExit.triggered.connect(QApplication.instance().quit)
 
     # 连接切换图像按钮方法
     def buttonConnect(self):
         self.ui.preImageButton.clicked.connect((partial(preImage, self.model, self.ui.openImageFileLabel)))
         self.ui.nextImageButton.clicked.connect((partial(nextImage, self.model, self.ui.openImageFileLabel)))
 
-    def opencvMenuConnect(self):
-        self.ui.blurAct.triggered.connect((partial(grayProcessingAct, self.model, self.ui.tabLabel1)))
+    # 色彩调整
+    def colorAdjustmentMenuConnect(self):
+        self.ui.actionGrayProcessing.triggered.connect((partial(grayProcessingAct, self.model, self.ui.tabLabel1)))
+
+    # 图像滤波器
+    def imageBlurMenuConnect(self):
+        pass
+
+    # 图像噪声
+    def noiseMenuConnect(self):
+        pass
+
+    # 形态学
+    def morphologyMenuConnect(self):
+        pass
+
+    # 图像分割
+    def imageSegmentationMenuConnect(self):
+        pass

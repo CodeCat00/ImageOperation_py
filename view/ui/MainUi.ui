@@ -358,8 +358,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>51</width>
-             <height>40</height>
+             <width>800</width>
+             <height>879</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -397,8 +397,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>51</width>
-             <height>40</height>
+             <width>800</width>
+             <height>879</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -430,8 +430,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>51</width>
-             <height>40</height>
+             <width>800</width>
+             <height>879</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -463,8 +463,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>51</width>
-             <height>40</height>
+             <width>800</width>
+             <height>879</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -494,55 +494,77 @@
      <height>37</height>
     </rect>
    </property>
-   <widget class="QMenu" name="fileMenu">
+   <widget class="QMenu" name="menuFile">
     <property name="title">
      <string>文件</string>
     </property>
-    <addaction name="openAct"/>
-    <addaction name="saveAct"/>
-    <addaction name="openFilePathAct"/>
-    <addaction name="exitAct"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionOpenFilePath"/>
+    <addaction name="actionExit"/>
    </widget>
-   <widget class="QMenu" name="opencvMenu">
+   <widget class="QMenu" name="menuOpenCV">
     <property name="title">
-     <string>OpenCV</string>
+     <string>OpenCV示例</string>
     </property>
-    <widget class="QMenu" name="image">
+    <widget class="QMenu" name="menuColorAdjustment">
      <property name="title">
-      <string>图像处理</string>
+      <string>色彩调整</string>
      </property>
-     <addaction name="thresholdAct"/>
-     <addaction name="blurAct"/>
-     <addaction name="gaussianBlurAct"/>
-     <addaction name="medianBlurAct"/>
-     <addaction name="bilateralFilterAct"/>
-     <addaction name="morphologyExOpenAct"/>
-     <addaction name="morphologyExCloseAct"/>
-     <addaction name="morphologyExGradientAct"/>
-     <addaction name="morphologyExTophatAct"/>
-     <addaction name="morphologyExBlackhatAct"/>
-     <addaction name="sobelAct"/>
-     <addaction name="cannyAct"/>
-     <addaction name="dilateAct"/>
-     <addaction name="findContoursAct"/>
-     <addaction name="equalizeHistAct"/>
-     <addaction name="createCLAHEAct"/>
-     <addaction name="houghLinesAct"/>
+     <addaction name="actionGrayProcessing"/>
+     <addaction name="actionImageInversion"/>
+     <addaction name="actionLogarithmicTransformation"/>
+     <addaction name="actionGammaTransform"/>
+     <addaction name="actionHistogramEqualization"/>
+     <addaction name="actionSmoothSpatialFilter"/>
+     <addaction name="actionSharpeningSpatialFilter"/>
     </widget>
-    <widget class="QMenu" name="menuopencv2">
+    <widget class="QMenu" name="menuImageBlur">
      <property name="title">
-      <string>opencv2</string>
+      <string>图像滤波器</string>
      </property>
-     <addaction name="houghCirclesAct"/>
-     <addaction name="watershedAct"/>
-     <addaction name="grabCutAct"/>
-     <addaction name="houghLinesPAct"/>
+     <addaction name="actionGaussianBlur"/>
+     <addaction name="actionMeanBlur"/>
+     <addaction name="actionMedianBlur"/>
+     <addaction name="actionSobel"/>
+     <addaction name="actionLaplacian"/>
     </widget>
-    <addaction name="image"/>
-    <addaction name="menuopencv2"/>
+    <widget class="QMenu" name="menuNoise">
+     <property name="title">
+      <string>图像噪声</string>
+     </property>
+     <addaction name="actionGaussianNoise"/>
+     <addaction name="actionSaltAndPepperNoise"/>
+    </widget>
+    <widget class="QMenu" name="menuMorphology">
+     <property name="title">
+      <string>形态学</string>
+     </property>
+     <addaction name="actionBinaryImage"/>
+     <addaction name="actionCorrosion"/>
+     <addaction name="actionExpansion"/>
+     <addaction name="actionOpenOperation"/>
+     <addaction name="actionClosedOperation"/>
+     <addaction name="actionBoundaryExtraction"/>
+     <addaction name="actionHoleFilling"/>
+    </widget>
+    <widget class="QMenu" name="menuImageSegmentation">
+     <property name="title">
+      <string>图像分割</string>
+     </property>
+     <addaction name="actionOutlierDetection"/>
+     <addaction name="actionEdgeDetection"/>
+     <addaction name="actionAdaptiveThreshold"/>
+     <addaction name="actionWatershed"/>
+    </widget>
+    <addaction name="menuColorAdjustment"/>
+    <addaction name="menuImageBlur"/>
+    <addaction name="menuNoise"/>
+    <addaction name="menuMorphology"/>
+    <addaction name="menuImageSegmentation"/>
    </widget>
-   <addaction name="fileMenu"/>
-   <addaction name="opencvMenu"/>
+   <addaction name="menuFile"/>
+   <addaction name="menuOpenCV"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -553,7 +575,7 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="openAct">
+  <action name="actionOpen">
    <property name="text">
     <string>打开图片</string>
    </property>
@@ -561,7 +583,7 @@
     <string>Ctrl+O</string>
    </property>
   </action>
-  <action name="saveAct">
+  <action name="actionSave">
    <property name="checkable">
     <bool>false</bool>
    </property>
@@ -575,7 +597,7 @@
     <string>Ctrl+S</string>
    </property>
   </action>
-  <action name="exitAct">
+  <action name="actionExit">
    <property name="text">
     <string>退出</string>
    </property>
@@ -583,123 +605,138 @@
     <string>Ctrl+Q</string>
    </property>
   </action>
-  <action name="openFilePathAct">
+  <action name="actionOpenFilePath">
    <property name="text">
     <string>读取文件夹</string>
    </property>
   </action>
-  <action name="thresholdAct">
+  <action name="actionGrayProcessing">
    <property name="text">
-    <string>图像阈值</string>
-   </property>
-   <property name="iconText">
-    <string>图像阈值</string>
+    <string>灰度处理</string>
    </property>
   </action>
-  <action name="blurAct">
+  <action name="actionImageInversion">
    <property name="text">
-    <string>blurAct</string>
+    <string>图像反转</string>
    </property>
   </action>
-  <action name="gaussianBlurAct">
+  <action name="actionLogarithmicTransformation">
    <property name="text">
-    <string>gaussianBlurAct</string>
+    <string>对数变换</string>
    </property>
   </action>
-  <action name="medianBlurAct">
+  <action name="actionGammaTransform">
    <property name="text">
-    <string>medianBlurAct</string>
+    <string>伽马变换</string>
    </property>
   </action>
-  <action name="bilateralFilterAct">
+  <action name="actionHistogramEqualization">
    <property name="text">
-    <string>bilateralFilterAct</string>
+    <string>直方图均衡化</string>
    </property>
   </action>
-  <action name="morphologyExOpenAct">
+  <action name="actionSmoothSpatialFilter">
    <property name="text">
-    <string>morphologyExOpenAct</string>
+    <string>平滑空间滤波器</string>
    </property>
   </action>
-  <action name="morphologyExCloseAct">
+  <action name="actionSharpeningSpatialFilter">
    <property name="text">
-    <string>morphologyExCloseAct</string>
+    <string>锐化空间滤波器</string>
    </property>
   </action>
-  <action name="morphologyExGradientAct">
+  <action name="actionGaussianBlur">
    <property name="text">
-    <string>morphologyExGradientAct</string>
+    <string>低通滤波器</string>
    </property>
   </action>
-  <action name="morphologyExTophatAct">
+  <action name="actionMeanBlur">
    <property name="text">
-    <string>morphologyExTophatAct</string>
+    <string>均值滤波器</string>
    </property>
   </action>
-  <action name="morphologyExBlackhatAct">
+  <action name="actionMedianBlur">
    <property name="text">
-    <string>morphologyExBlackhatAct</string>
+    <string>中值滤波器</string>
    </property>
   </action>
-  <action name="sobelAct">
+  <action name="actionSobel">
    <property name="text">
-    <string>sobelAct</string>
+    <string>方向滤波器</string>
    </property>
   </action>
-  <action name="cannyAct">
+  <action name="actionLaplacian">
    <property name="text">
-    <string>cannyAct</string>
+    <string>拉普拉斯变换</string>
    </property>
   </action>
-  <action name="dilateAct">
+  <action name="actionGaussianNoise">
    <property name="text">
-    <string>dilateAct</string>
+    <string>高斯噪声</string>
    </property>
   </action>
-  <action name="findContoursAct">
+  <action name="actionSaltAndPepperNoise">
    <property name="text">
-    <string>findContoursAct</string>
+    <string>椒盐噪声</string>
    </property>
   </action>
-  <action name="equalizeHistAct">
+  <action name="actionBinaryImage">
    <property name="text">
-    <string>equalizeHistAct</string>
+    <string>二值图像</string>
    </property>
   </action>
-  <action name="createCLAHEAct">
+  <action name="actionCorrosion">
    <property name="text">
-    <string>createCLAHEAct</string>
+    <string>腐蚀</string>
    </property>
   </action>
-  <action name="houghLinesAct">
+  <action name="actionExpansion">
    <property name="text">
-    <string>houghLinesAct</string>
+    <string>膨胀</string>
    </property>
   </action>
-  <action name="houghCirclesAct">
+  <action name="actionOpenOperation">
    <property name="text">
-    <string>houghCirclesAct</string>
+    <string>开操作</string>
    </property>
   </action>
-  <action name="watershedAct">
+  <action name="actionClosedOperation">
    <property name="text">
-    <string>watershedAct</string>
+    <string>闭操作</string>
    </property>
   </action>
-  <action name="grabCutAct">
+  <action name="actionBoundaryExtraction">
    <property name="text">
-    <string>grabCutAct</string>
+    <string>边界提取</string>
    </property>
   </action>
-  <action name="houghLinesPAct">
+  <action name="actionHoleFilling">
    <property name="text">
-    <string>houghLinesPAct</string>
+    <string>孔洞填充</string>
+   </property>
+  </action>
+  <action name="actionOutlierDetection">
+   <property name="text">
+    <string>孤立点检测</string>
+   </property>
+  </action>
+  <action name="actionEdgeDetection">
+   <property name="text">
+    <string>边缘检测</string>
+   </property>
+  </action>
+  <action name="actionAdaptiveThreshold">
+   <property name="text">
+    <string>自适应阈值</string>
+   </property>
+  </action>
+  <action name="actionWatershed">
+   <property name="text">
+    <string>分水岭</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="../qrc/MainUi.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
