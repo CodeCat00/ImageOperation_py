@@ -3,8 +3,9 @@ from functools import partial
 from PySide6.QtWidgets import QMainWindow, QApplication
 
 from control.action.ButtonAction import preImage, nextImage
-from control.action.ColorAdjustmentAction import grayProcessingAct
-from control.action.FileMenuAction import openAct, saveAct, openFilePathAct
+from control.action.FileMenuMenu import openAct, saveAct, openFilePathAct
+from control.action.GeometricTransformationMenu import resizeAct, translationAct, rotationAct, warpAffineAct, \
+    warpPerspectiveAct
 from model.ImageOperationModel import ImageOperationModel
 from view.ui.Ui_MainUi import Ui_MainUi
 
@@ -47,20 +48,8 @@ class Window(QMainWindow):
 
     # 色彩调整
     def colorAdjustmentMenuConnect(self):
-        self.ui.actionGrayProcessing.triggered.connect((partial(grayProcessingAct, self.model, self.ui.tabLabel1)))
-
-    # 图像滤波器
-    def imageBlurMenuConnect(self):
-        pass
-
-    # 图像噪声
-    def noiseMenuConnect(self):
-        pass
-
-    # 形态学
-    def morphologyMenuConnect(self):
-        pass
-
-    # 图像分割
-    def imageSegmentationMenuConnect(self):
-        pass
+        self.ui.actionResize.triggered.connect((partial(resizeAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionTranslation.triggered.connect((partial(translationAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionRotation.triggered.connect((partial(rotationAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionWarpAffine.triggered.connect((partial(warpAffineAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionWarpPerspective.triggered.connect((partial(warpPerspectiveAct, self.model, self.ui.tabLabel1)))
