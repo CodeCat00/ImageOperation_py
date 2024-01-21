@@ -3,7 +3,7 @@ from functools import partial
 from PySide6.QtWidgets import QMainWindow, QApplication
 
 from control.action.ButtonAction import preImage, nextImage
-from control.action.ColorAdjustmentAction import grayProcessingAct
+from control.action.ColorAdjustmentAction import grayProcessingAct, imageInversionAct
 from control.action.FileMenuAction import openAct, saveAct, openFilePathAct
 from model.ImageOperationModel import ImageOperationModel
 from view.ui.Ui_MainUi import Ui_MainUi
@@ -48,6 +48,7 @@ class Window(QMainWindow):
     # 色彩调整
     def colorAdjustmentMenuConnect(self):
         self.ui.actionGrayProcessing.triggered.connect((partial(grayProcessingAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionImageInversion.triggered.connect((partial(imageInversionAct, self.model, self.ui.tabLabel1)))
 
     # 图像滤波器
     def imageBlurMenuConnect(self):
