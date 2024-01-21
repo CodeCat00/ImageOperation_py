@@ -5,6 +5,7 @@ from PySide6.QtWidgets import QFileDialog
 from model.file.ImageFileModel import ImageFileModel
 
 
+# 获取图片地址
 def fetchFilePathModel():
     # 变量
     imageFiles = []

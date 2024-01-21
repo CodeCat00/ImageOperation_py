@@ -1,6 +1,7 @@
 import cv2
 
 
+# 调整图像大小
 def resizeImage(image, minWidth, maxWidth, defaultWidth):
     # 获取图像大小
     height, width, _ = image.shape

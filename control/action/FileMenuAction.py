@@ -3,10 +3,11 @@ from PySide6.QtWidgets import QFileDialog, QLabel, QStatusBar
 
 from control.convert.ImageConvert import cImage2QPixmap
 from control.file.FilePathManager import fetchFilePathModel
-from model.ImageOperationmodel import ImageOperationModel
+from model.ImageOperationModel import ImageOperationModel
 from model.image.ImageModel import ImageModel
 
 
+# 打开图片
 def openAct(model=ImageOperationModel, label=QLabel):
     # 选择文件
     imageFile, _ = QFileDialog.getOpenFileNames(None, 'Open Images', '', 'Image files (*.png *.jpg *.jpeg)')
@@ -18,6 +19,7 @@ def openAct(model=ImageOperationModel, label=QLabel):
     model.setImageModel(imageModel)
 
 
+# 保存图片
 def saveAct(model=ImageOperationModel, bar=QStatusBar):
     # 选择文件及路径
     imageFile, _ = QFileDialog.getSaveFileName(None, '设置保存路径', '', 'Image files (*.png *.jpg *.jpeg)')
@@ -27,6 +29,7 @@ def saveAct(model=ImageOperationModel, bar=QStatusBar):
     bar.showMessage("保存路径：" + imageFile)
 
 
+# 打开图片目录（自动显示第一张图片）
 def openFilePathAct(model=ImageOperationModel, label=QLabel):
     # 获取图像文件列表
     imageFileModel = fetchFilePathModel()

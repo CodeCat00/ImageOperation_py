@@ -2,6 +2,7 @@ import cv2
 from PySide6.QtGui import QImage, QPixmap
 
 
+# 图片格式转换 opencv -> Qt.QPixmap
 def cImage2QPixmap(cImage):
     # 大小
     height, width, depth = cImage.shape

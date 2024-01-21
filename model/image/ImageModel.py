@@ -1,6 +1,6 @@
 import cv2
 
-from control.image.ImageManager import resizeImage
+from control.image.ImageBasicManager import resizeImage
 
 
 class ImageModel:
@@ -15,6 +15,7 @@ class ImageModel:
         self.dealImage = self.inImage
         self.showImage = resizeImage(self.dealImage, 256, 2048, 1024)
 
+    # 更新图像处理图片
     def setDealImage(self, image):
         self.dealImage = image
         self.showImage = resizeImage(self.dealImage, 256, 2048, 1024)
