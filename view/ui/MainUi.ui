@@ -276,7 +276,7 @@
            <x>0</x>
            <y>0</y>
            <width>840</width>
-           <height>894</height>
+           <height>896</height>
           </rect>
          </property>
          <property name="layoutDirection">
@@ -323,7 +323,7 @@
              <x>0</x>
              <y>0</y>
              <width>800</width>
-             <height>879</height>
+             <height>881</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout">
@@ -358,8 +358,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>83</width>
-             <height>40</height>
+             <width>800</width>
+             <height>879</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -397,8 +397,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>83</width>
-             <height>40</height>
+             <width>800</width>
+             <height>879</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -430,8 +430,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>83</width>
-             <height>40</height>
+             <width>800</width>
+             <height>879</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -463,8 +463,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>83</width>
-             <height>40</height>
+             <width>800</width>
+             <height>879</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -491,7 +491,7 @@
      <x>0</x>
      <y>0</y>
      <width>1728</width>
-     <height>37</height>
+     <height>35</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -517,7 +517,7 @@
      <addaction name="actionWarpAffine"/>
      <addaction name="actionWarpPerspective"/>
     </widget>
-    <widget class="QMenu" name="menu">
+    <widget class="QMenu" name="menuImageThreshold">
      <property name="title">
       <string>图像阈值</string>
      </property>
@@ -530,7 +530,18 @@
      <addaction name="actionAdaptiveGaussianThreshold"/>
      <addaction name="actionOTSUThreshold"/>
     </widget>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>图像光滑</string>
+     </property>
+     <addaction name="actionFilter2D"/>
+     <addaction name="actionBlur"/>
+     <addaction name="actionGaussianBlur"/>
+     <addaction name="actionMedianBlur"/>
+     <addaction name="actionBilateralFilter"/>
+    </widget>
     <addaction name="menuGeometricTransformation"/>
+    <addaction name="menuImageThreshold"/>
     <addaction name="menu"/>
    </widget>
    <addaction name="menuFile"/>
@@ -643,6 +654,31 @@
   <action name="actionOTSUThreshold">
    <property name="text">
     <string>OTSU二值化</string>
+   </property>
+  </action>
+  <action name="actionFilter2D">
+   <property name="text">
+    <string>二维卷积</string>
+   </property>
+  </action>
+  <action name="actionBlur">
+   <property name="text">
+    <string>均值模糊</string>
+   </property>
+  </action>
+  <action name="actionGaussianBlur">
+   <property name="text">
+    <string>高斯模糊</string>
+   </property>
+  </action>
+  <action name="actionMedianBlur">
+   <property name="text">
+    <string>中值滤波</string>
+   </property>
+  </action>
+  <action name="actionBilateralFilter">
+   <property name="text">
+    <string>双边滤波</string>
    </property>
   </action>
  </widget>

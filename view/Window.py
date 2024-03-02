@@ -6,6 +6,7 @@ from control.action.ButtonAction import preImage, nextImage
 from control.action.FileMenuMenu import openAct, saveAct, openFilePathAct
 from control.action.GeometricTransformationMenu import resizeAct, translationAct, rotationAct, warpAffineAct, \
     warpPerspectiveAct
+from control.action.ImageSmoothMenu import filter2DAct, blurAct, gaussianBlurAct, medianBlurAct, bilateralFilterAct
 from control.action.ImageThresholdMenu import simpleBinaryThresholdAct, simpleTruncThresholdAct, \
     simpleBinaryInvThresholdAct, simpleToZeroThresholdAct, simpleToZeroInvThresholdAct, adaptiveMeanThresholdAct, \
     adaptiveGaussianThresholdAct, OTSUThresholdAct
@@ -76,3 +77,11 @@ class Window(QMainWindow):
             (partial(adaptiveGaussianThresholdAct, self.model, self.ui.tabLabel1)))
         self.ui.actionOTSUThreshold.triggered.connect(
             (partial(OTSUThresholdAct, self.model, self.ui.tabLabel1)))
+
+    # 图像光滑
+    def geometricTransformationMenuConnect(self):
+        self.ui.actionFilter2D.triggered.connect((partial(filter2DAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionBlur.triggered.connect((partial(blurAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionGaussianBlur.triggered.connect((partial(gaussianBlurAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionMedianBlur.triggered.connect((partial(medianBlurAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionBilateralFilter.triggered.connect((partial(bilateralFilterAct, self.model, self.ui.tabLabel1)))
