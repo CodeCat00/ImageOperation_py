@@ -358,8 +358,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>800</width>
-             <height>879</height>
+             <width>83</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -397,8 +397,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>800</width>
-             <height>879</height>
+             <width>83</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -430,8 +430,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>800</width>
-             <height>879</height>
+             <width>83</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -463,8 +463,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>800</width>
-             <height>879</height>
+             <width>83</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -517,7 +517,20 @@
      <addaction name="actionWarpAffine"/>
      <addaction name="actionWarpPerspective"/>
     </widget>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>图像阈值</string>
+     </property>
+     <addaction name="actionSimpleBinaryThreshold"/>
+     <addaction name="actionSimpleBinaryInvThreshold"/>
+     <addaction name="actionSimpleTruncThreshold"/>
+     <addaction name="actionSimpleToZeroThreshold"/>
+     <addaction name="actionSimpleToZeroInvThreshold"/>
+     <addaction name="actionAdaptiveMeanThreshold"/>
+     <addaction name="actionAdaptiveGaussianThreshold"/>
+    </widget>
     <addaction name="menuGeometricTransformation"/>
+    <addaction name="menu"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuOpenCV"/>
@@ -589,6 +602,41 @@
   <action name="actionWarpPerspective">
    <property name="text">
     <string>透视变换</string>
+   </property>
+  </action>
+  <action name="actionSimpleBinaryThreshold">
+   <property name="text">
+    <string>简单二值化阈值</string>
+   </property>
+  </action>
+  <action name="actionSimpleBinaryInvThreshold">
+   <property name="text">
+    <string>简单反二值化阈值</string>
+   </property>
+  </action>
+  <action name="actionSimpleTruncThreshold">
+   <property name="text">
+    <string>简单截断阈值</string>
+   </property>
+  </action>
+  <action name="actionSimpleToZeroThreshold">
+   <property name="text">
+    <string>简单置零阈值</string>
+   </property>
+  </action>
+  <action name="actionSimpleToZeroInvThreshold">
+   <property name="text">
+    <string>简单置零反阈值</string>
+   </property>
+  </action>
+  <action name="actionAdaptiveMeanThreshold">
+   <property name="text">
+    <string>自适应均值阈值</string>
+   </property>
+  </action>
+  <action name="actionAdaptiveGaussianThreshold">
+   <property name="text">
+    <string>自适应高斯阈值</string>
    </property>
   </action>
  </widget>

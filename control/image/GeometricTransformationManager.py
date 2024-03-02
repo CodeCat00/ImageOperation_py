@@ -17,8 +17,8 @@ def translation(img):
     # 读取通道
     rows, cols, _ = shape(img)
     # 平移
-    M = np.float32([[1, 0, 100], [0, 1, 50]])
-    dst = cv2.warpAffine(img, M, (cols, rows))
+    m = np.float32([[1, 0, 100], [0, 1, 50]])
+    dst = cv2.warpAffine(img, m, (cols, rows))
     # 返回结果
     return dst
 
@@ -28,8 +28,8 @@ def rotation(img):
     # 读取通道
     rows, cols, _ = shape(img)
     # 旋转
-    M = cv2.getRotationMatrix2D(((cols - 1) / 2.0, (rows - 1) / 2.0), 90, 1)
-    dst = cv2.warpAffine(img, M, (cols, rows))
+    m = cv2.getRotationMatrix2D(((cols - 1) / 2.0, (rows - 1) / 2.0), 90, 1)
+    dst = cv2.warpAffine(img, m, (cols, rows))
     # 返回结果
     return dst
 
@@ -50,7 +50,6 @@ def warpAffine(img):
 # 透视变换
 def warpPerspective(img):
     # 读取通道
-    rows, cols, ch = shape(img)
     pts1 = np.float32([[56, 65], [368, 52], [28, 387], [389, 390]])
     pts2 = np.float32([[0, 0], [300, 0], [0, 300], [300, 300]])
     # 透视变换
