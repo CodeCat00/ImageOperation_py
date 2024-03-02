@@ -2,7 +2,7 @@ from PySide6.QtWidgets import QLabel
 
 from control.action.CommonAction import updateImageInfo
 from control.image.ImageThresholdManager import simpleBinaryThreshold, simpleBinaryInvThreshold, simpleTruncThreshold, \
-    simpleToZeroThreshold, simpleToZeroInvThreshold, adaptiveMeanThreshold, adaptiveGaussianThreshold
+    simpleToZeroThreshold, simpleToZeroInvThreshold, adaptiveMeanThreshold, adaptiveGaussianThreshold, OTSUThreshold
 from model.ImageOperationModel import ImageOperationModel
 
 
@@ -58,5 +58,13 @@ def adaptiveMeanThresholdAct(model=ImageOperationModel, label=QLabel):
 def adaptiveGaussianThresholdAct(model=ImageOperationModel, label=QLabel):
     # 自适应高斯阈值
     image = adaptiveGaussianThreshold(model.getImageModel().inImage)
+    # 更新图片相关信息
+    updateImageInfo(image, model, label)
+
+
+# OTSU二值化
+def OTSUThresholdAct(model=ImageOperationModel, label=QLabel):
+    # 自适应高斯阈值
+    image = OTSUThreshold(model.getImageModel().inImage)
     # 更新图片相关信息
     updateImageInfo(image, model, label)

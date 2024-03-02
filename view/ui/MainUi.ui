@@ -528,6 +528,7 @@
      <addaction name="actionSimpleToZeroInvThreshold"/>
      <addaction name="actionAdaptiveMeanThreshold"/>
      <addaction name="actionAdaptiveGaussianThreshold"/>
+     <addaction name="actionOTSUThreshold"/>
     </widget>
     <addaction name="menuGeometricTransformation"/>
     <addaction name="menu"/>
@@ -637,6 +638,11 @@
   <action name="actionAdaptiveGaussianThreshold">
    <property name="text">
     <string>自适应高斯阈值</string>
+   </property>
+  </action>
+  <action name="actionOTSUThreshold">
+   <property name="text">
+    <string>OTSU二值化</string>
    </property>
   </action>
  </widget>

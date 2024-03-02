@@ -65,3 +65,14 @@ def adaptiveGaussianThreshold(img):
     res = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
     # 返回结果
     return res
+
+
+# OTSU二值化
+def OTSUThreshold(img):
+    # 转灰度
+    if len(img.shape) != 2:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    # OTSU二值化
+    _, res = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    # 返回结果
+    return res

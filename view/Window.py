@@ -8,7 +8,7 @@ from control.action.GeometricTransformationMenu import resizeAct, translationAct
     warpPerspectiveAct
 from control.action.ImageThresholdMenu import simpleBinaryThresholdAct, simpleTruncThresholdAct, \
     simpleBinaryInvThresholdAct, simpleToZeroThresholdAct, simpleToZeroInvThresholdAct, adaptiveMeanThresholdAct, \
-    adaptiveGaussianThresholdAct
+    adaptiveGaussianThresholdAct, OTSUThresholdAct
 from model.ImageOperationModel import ImageOperationModel
 from view.ui.Ui_MainUi import Ui_MainUi
 
@@ -74,3 +74,5 @@ class Window(QMainWindow):
             (partial(adaptiveMeanThresholdAct, self.model, self.ui.tabLabel1)))
         self.ui.actionAdaptiveGaussianThreshold.triggered.connect(
             (partial(adaptiveGaussianThresholdAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionOTSUThreshold.triggered.connect(
+            (partial(OTSUThresholdAct, self.model, self.ui.tabLabel1)))

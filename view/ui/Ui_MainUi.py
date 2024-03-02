@@ -238,6 +238,8 @@ class Ui_MainUi(object):
         self.actionAdaptiveMeanThreshold.setObjectName(u"actionAdaptiveMeanThreshold")
         self.actionAdaptiveGaussianThreshold = QAction(MainUi)
         self.actionAdaptiveGaussianThreshold.setObjectName(u"actionAdaptiveGaussianThreshold")
+        self.actionOTSUThreshold = QAction(MainUi)
+        self.actionOTSUThreshold.setObjectName(u"actionOTSUThreshold")
         self.centralWidget = QWidget(MainUi)
         self.centralWidget.setObjectName(u"centralWidget")
         self.centralWidget.setEnabled(True)
@@ -487,6 +489,7 @@ class Ui_MainUi(object):
         self.menu.addAction(self.actionSimpleToZeroInvThreshold)
         self.menu.addAction(self.actionAdaptiveMeanThreshold)
         self.menu.addAction(self.actionAdaptiveGaussianThreshold)
+        self.menu.addAction(self.actionOTSUThreshold)
 
         self.retranslateUi(MainUi)
 
@@ -523,6 +526,7 @@ class Ui_MainUi(object):
         self.actionSimpleToZeroInvThreshold.setText(QCoreApplication.translate("MainUi", u"\u7b80\u5355\u7f6e\u96f6\u53cd\u9608\u503c", None))
         self.actionAdaptiveMeanThreshold.setText(QCoreApplication.translate("MainUi", u"\u81ea\u9002\u5e94\u5747\u503c\u9608\u503c", None))
         self.actionAdaptiveGaussianThreshold.setText(QCoreApplication.translate("MainUi", u"\u81ea\u9002\u5e94\u9ad8\u65af\u9608\u503c", None))
+        self.actionOTSUThreshold.setText(QCoreApplication.translate("MainUi", u"OTSU\u4e8c\u503c\u5316", None))
         self.preImageButton.setText(QCoreApplication.translate("MainUi", u"\u4e0a\u4e00\u5f20", None))
         self.nextImageButton.setText(QCoreApplication.translate("MainUi", u"\u4e0b\u4e00\u5f20", None))
         self.openImageFileLabel.setText("")
