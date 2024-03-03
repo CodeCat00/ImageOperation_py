@@ -560,11 +560,18 @@
      <addaction name="actionSobelX"/>
      <addaction name="actionSobelY"/>
     </widget>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>边缘检测</string>
+     </property>
+     <addaction name="actionCanny"/>
+    </widget>
     <addaction name="menuGeometricTransformation"/>
     <addaction name="menuImageThreshold"/>
     <addaction name="menu"/>
     <addaction name="menu_2"/>
     <addaction name="menu_3"/>
+    <addaction name="menu_4"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuOpenCV"/>
@@ -751,6 +758,11 @@
   <action name="actionSobelY">
    <property name="text">
     <string>SobelY轴梯度</string>
+   </property>
+  </action>
+  <action name="actionCanny">
+   <property name="text">
+    <string>Canny</string>
    </property>
   </action>
  </widget>

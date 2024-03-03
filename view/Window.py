@@ -3,6 +3,7 @@ from functools import partial
 from PySide6.QtWidgets import QMainWindow, QApplication
 
 from control.action.ButtonAction import preImage, nextImage
+from control.action.EdgeDetectionMenu import cannyAct
 from control.action.FileMenuMenu import openAct, saveAct, openFilePathAct
 from control.action.GeometricTransformationMenu import resizeAct, translationAct, rotationAct, warpAffineAct, \
     warpPerspectiveAct
@@ -31,6 +32,7 @@ class Window(QMainWindow):
         self.buttonConnect()
         self.fileMenuConnect()
         self.gradientConnect()
+        self.EdgeDetectionConnect()
         self.imageThresholdMenuConnect()
         self.geometricTransformationMenuConnect()
         self.morphologicalTransformationConnect()
@@ -110,3 +112,7 @@ class Window(QMainWindow):
         self.ui.actionLaplacian.triggered.connect((partial(laplacianAct, self.model, self.ui.tabLabel1)))
         self.ui.actionSobelX.triggered.connect((partial(sobelXAct, self.model, self.ui.tabLabel1)))
         self.ui.actionSobelY.triggered.connect((partial(sobelYAct, self.model, self.ui.tabLabel1)))
+
+    # 边缘检测
+    def EdgeDetectionConnect(self):
+        self.ui.actionCanny.triggered.connect((partial(cannyAct, self.model, self.ui.tabLabel1)))

@@ -270,6 +270,8 @@ class Ui_MainUi(object):
         self.actionSobelX.setObjectName(u"actionSobelX")
         self.actionSobelY = QAction(MainUi)
         self.actionSobelY.setObjectName(u"actionSobelY")
+        self.actionCanny = QAction(MainUi)
+        self.actionCanny.setObjectName(u"actionCanny")
         self.centralWidget = QWidget(MainUi)
         self.centralWidget.setObjectName(u"centralWidget")
         self.centralWidget.setEnabled(True)
@@ -497,6 +499,8 @@ class Ui_MainUi(object):
         self.menu_2.setObjectName(u"menu_2")
         self.menu_3 = QMenu(self.menuOpenCV)
         self.menu_3.setObjectName(u"menu_3")
+        self.menu_4 = QMenu(self.menuOpenCV)
+        self.menu_4.setObjectName(u"menu_4")
         MainUi.setMenuBar(self.menuBar)
         self.mainToolBar = QToolBar(MainUi)
         self.mainToolBar.setObjectName(u"mainToolBar")
@@ -516,6 +520,7 @@ class Ui_MainUi(object):
         self.menuOpenCV.addAction(self.menu.menuAction())
         self.menuOpenCV.addAction(self.menu_2.menuAction())
         self.menuOpenCV.addAction(self.menu_3.menuAction())
+        self.menuOpenCV.addAction(self.menu_4.menuAction())
         self.menuGeometricTransformation.addAction(self.actionResize)
         self.menuGeometricTransformation.addAction(self.actionTranslation)
         self.menuGeometricTransformation.addAction(self.actionRotation)
@@ -544,6 +549,7 @@ class Ui_MainUi(object):
         self.menu_3.addAction(self.actionLaplacian)
         self.menu_3.addAction(self.actionSobelX)
         self.menu_3.addAction(self.actionSobelY)
+        self.menu_4.addAction(self.actionCanny)
 
         self.retranslateUi(MainUi)
 
@@ -596,6 +602,7 @@ class Ui_MainUi(object):
         self.actionLaplacian.setText(QCoreApplication.translate("MainUi", u"Laplacian\u5fae\u5206", None))
         self.actionSobelX.setText(QCoreApplication.translate("MainUi", u"SobelX\u8f74\u68af\u5ea6", None))
         self.actionSobelY.setText(QCoreApplication.translate("MainUi", u"SobelY\u8f74\u68af\u5ea6", None))
+        self.actionCanny.setText(QCoreApplication.translate("MainUi", u"Canny", None))
         self.preImageButton.setText(QCoreApplication.translate("MainUi", u"\u4e0a\u4e00\u5f20", None))
         self.nextImageButton.setText(QCoreApplication.translate("MainUi", u"\u4e0b\u4e00\u5f20", None))
         self.openImageFileLabel.setText("")
@@ -616,5 +623,6 @@ class Ui_MainUi(object):
         self.menu.setTitle(QCoreApplication.translate("MainUi", u"\u56fe\u50cf\u5149\u6ed1", None))
         self.menu_2.setTitle(QCoreApplication.translate("MainUi", u"\u5f62\u6001\u8f6c\u6362", None))
         self.menu_3.setTitle(QCoreApplication.translate("MainUi", u"\u68af\u5ea6", None))
+        self.menu_4.setTitle(QCoreApplication.translate("MainUi", u"\u8fb9\u7f18\u68c0\u6d4b", None))
     # retranslateUi
 
