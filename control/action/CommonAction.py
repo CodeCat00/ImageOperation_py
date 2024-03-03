@@ -7,7 +7,7 @@ from control.convert.ImageConvert import cImageToQPixmap
 
 
 # menu模板
-def menuDealTemplate(func, model=ImageOperationModel, label=QLabel):
+def menuActionTemplate(func, model=ImageOperationModel, label=QLabel):
     # 深拷贝
     deepCopyImage = np.copy(model.getImageModel().inImage)
     # 处理
