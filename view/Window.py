@@ -10,6 +10,8 @@ from control.action.ImageSmoothMenu import filter2DAct, blurAct, gaussianBlurAct
 from control.action.ImageThresholdMenu import simpleBinaryThresholdAct, simpleTruncThresholdAct, \
     simpleBinaryInvThresholdAct, simpleToZeroThresholdAct, simpleToZeroInvThresholdAct, adaptiveMeanThresholdAct, \
     adaptiveGaussianThresholdAct, OTSUThresholdAct
+from control.action.MorphologicalTransformationMenu import erosionAct, morphologyExOpenAct, dilateAct, \
+    morphologyExCloseAct, morphologyExGradientAct, morphologyExTopHatAct, morphologyExBlackHatAct
 from model.ImageOperationModel import ImageOperationModel
 from view.ui.Ui_MainUi import Ui_MainUi
 
@@ -29,6 +31,7 @@ class Window(QMainWindow):
         self.buttonConnect()
         self.geometricTransformationMenuConnect()
         self.imageThresholdMenuConnect()
+        self.morphologicalTransformationConnect()
 
     # 初始化属性
     def initAttribute(self):
@@ -85,3 +88,17 @@ class Window(QMainWindow):
         self.ui.actionGaussianBlur.triggered.connect((partial(gaussianBlurAct, self.model, self.ui.tabLabel1)))
         self.ui.actionMedianBlur.triggered.connect((partial(medianBlurAct, self.model, self.ui.tabLabel1)))
         self.ui.actionBilateralFilter.triggered.connect((partial(bilateralFilterAct, self.model, self.ui.tabLabel1)))
+
+    # 形态转换
+    def morphologicalTransformationConnect(self):
+        self.ui.actionErosion.triggered.connect((partial(erosionAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionDilate.triggered.connect((partial(dilateAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionDilate.triggered.connect((partial(morphologyExOpenAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionMorphologyExClose.triggered.connect(
+            (partial(morphologyExCloseAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionMorphologyExOpen.triggered.connect(
+            (partial(morphologyExGradientAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionMorphologyExTopHat.triggered.connect(
+            (partial(morphologyExTopHatAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionMorphologyExBlackHat.triggered.connect(
+            (partial(morphologyExBlackHatAct, self.model, self.ui.tabLabel1)))

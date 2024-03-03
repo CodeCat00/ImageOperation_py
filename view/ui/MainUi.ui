@@ -276,7 +276,7 @@
            <x>0</x>
            <y>0</y>
            <width>840</width>
-           <height>896</height>
+           <height>894</height>
           </rect>
          </property>
          <property name="layoutDirection">
@@ -323,7 +323,7 @@
              <x>0</x>
              <y>0</y>
              <width>800</width>
-             <height>881</height>
+             <height>879</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout">
@@ -358,8 +358,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>800</width>
-             <height>879</height>
+             <width>83</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -397,8 +397,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>800</width>
-             <height>879</height>
+             <width>83</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -430,8 +430,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>800</width>
-             <height>879</height>
+             <width>83</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -463,8 +463,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>800</width>
-             <height>879</height>
+             <width>83</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -491,7 +491,7 @@
      <x>0</x>
      <y>0</y>
      <width>1728</width>
-     <height>35</height>
+     <height>37</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -540,9 +540,22 @@
      <addaction name="actionMedianBlur"/>
      <addaction name="actionBilateralFilter"/>
     </widget>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>形态转换</string>
+     </property>
+     <addaction name="actionErosion"/>
+     <addaction name="actionDilate"/>
+     <addaction name="actionMorphologyExOpen"/>
+     <addaction name="actionMorphologyExClose"/>
+     <addaction name="actionMorphologyExGradient"/>
+     <addaction name="actionMorphologyExTopHat"/>
+     <addaction name="actionMorphologyExBlackHat"/>
+    </widget>
     <addaction name="menuGeometricTransformation"/>
     <addaction name="menuImageThreshold"/>
     <addaction name="menu"/>
+    <addaction name="menu_2"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuOpenCV"/>
@@ -679,6 +692,41 @@
   <action name="actionBilateralFilter">
    <property name="text">
     <string>双边滤波</string>
+   </property>
+  </action>
+  <action name="actionErosion">
+   <property name="text">
+    <string>腐蚀</string>
+   </property>
+  </action>
+  <action name="actionDilate">
+   <property name="text">
+    <string>膨胀</string>
+   </property>
+  </action>
+  <action name="actionMorphologyExOpen">
+   <property name="text">
+    <string>开运算</string>
+   </property>
+  </action>
+  <action name="actionMorphologyExClose">
+   <property name="text">
+    <string>闭运算</string>
+   </property>
+  </action>
+  <action name="actionMorphologyExGradient">
+   <property name="text">
+    <string>形态梯度</string>
+   </property>
+  </action>
+  <action name="actionMorphologyExTopHat">
+   <property name="text">
+    <string>顶帽</string>
+   </property>
+  </action>
+  <action name="actionMorphologyExBlackHat">
+   <property name="text">
+    <string>黑帽</string>
    </property>
   </action>
  </widget>
