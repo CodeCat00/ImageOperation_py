@@ -2,18 +2,15 @@ from functools import partial
 
 from PySide6.QtWidgets import QMainWindow, QApplication
 
-from control.action.ButtonAction import preImage, nextImage
-from control.action.EdgeDetectionMenu import cannyAct
-from control.action.FileMenuMenu import openAct, saveAct, openFilePathAct
-from control.action.GeometricTransformationMenu import resizeAct, translationAct, rotationAct, warpAffineAct, \
-    warpPerspectiveAct
-from control.action.GradientMenu import laplacianAct, sobelXAct, sobelYAct
-from control.action.ImageSmoothMenu import filter2DAct, blurAct, gaussianBlurAct, medianBlurAct, bilateralFilterAct
-from control.action.ImageThresholdMenu import simpleBinaryThresholdAct, simpleTruncThresholdAct, \
-    simpleBinaryInvThresholdAct, simpleToZeroThresholdAct, simpleToZeroInvThresholdAct, adaptiveMeanThresholdAct, \
-    adaptiveGaussianThresholdAct, OTSUThresholdAct
-from control.action.MorphologicalTransformationMenu import erosionAct, morphologyExOpenAct, dilateAct, \
-    morphologyExCloseAct, morphologyExGradientAct, morphologyExTopHatAct, morphologyExBlackHatAct
+from control.action.ButtonAction import *
+from control.action.ContourMenu import *
+from control.action.EdgeDetectionMenu import *
+from control.action.FileMenuMenu import *
+from control.action.GeometricTransformationMenu import *
+from control.action.GradientMenu import *
+from control.action.ImageSmoothMenu import *
+from control.action.ImageThresholdMenu import *
+from control.action.MorphologicalTransformationMenu import *
 from model.ImageOperationModel import ImageOperationModel
 from view.ui.Ui_MainUi import Ui_MainUi
 
@@ -31,6 +28,7 @@ class Window(QMainWindow):
         # 关联槽函数
         self.buttonConnect()
         self.fileMenuConnect()
+        self.ContourConnect()
         self.gradientConnect()
         self.EdgeDetectionConnect()
         self.imageThresholdMenuConnect()
@@ -116,3 +114,12 @@ class Window(QMainWindow):
     # 边缘检测
     def EdgeDetectionConnect(self):
         self.ui.actionCanny.triggered.connect((partial(cannyAct, self.model, self.ui.tabLabel1)))
+
+    # 轮廓
+    def ContourConnect(self):
+        self.ui.actionApproxPolyDP.triggered.connect((partial(approxPolyDPAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionConvexHull.triggered.connect((partial(convexHullAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionDrawContours.triggered.connect((partial(drawContoursAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionCircle.triggered.connect((partial(circleAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionEllipse.triggered.connect((partial(ellipseAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionLine.triggered.connect((partial(lineAct, self.model, self.ui.tabLabel1)))

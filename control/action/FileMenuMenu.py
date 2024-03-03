@@ -2,7 +2,7 @@ import cv2
 from PySide6.QtWidgets import QFileDialog, QLabel, QStatusBar
 
 from control.convert.ImageConvert import cImageToQPixmap
-from control.file.FilePathManager import fetchFilePathModel
+from control.file.FilePathManager import *
 from model.ImageOperationModel import ImageOperationModel
 from model.image.ImageModel import ImageModel
 

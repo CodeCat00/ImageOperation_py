@@ -566,12 +566,24 @@
      </property>
      <addaction name="actionCanny"/>
     </widget>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>轮廓</string>
+     </property>
+     <addaction name="actionApproxPolyDP"/>
+     <addaction name="actionConvexHull"/>
+     <addaction name="actionDrawContours"/>
+     <addaction name="actionCircle"/>
+     <addaction name="actionEllipse"/>
+     <addaction name="actionLine"/>
+    </widget>
     <addaction name="menuGeometricTransformation"/>
     <addaction name="menuImageThreshold"/>
     <addaction name="menu"/>
     <addaction name="menu_2"/>
     <addaction name="menu_3"/>
     <addaction name="menu_4"/>
+    <addaction name="menu_5"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuOpenCV"/>
@@ -763,6 +775,36 @@
   <action name="actionCanny">
    <property name="text">
     <string>Canny</string>
+   </property>
+  </action>
+  <action name="actionApproxPolyDP">
+   <property name="text">
+    <string>轮廓近似</string>
+   </property>
+  </action>
+  <action name="actionConvexHull">
+   <property name="text">
+    <string>凸包</string>
+   </property>
+  </action>
+  <action name="actionDrawContours">
+   <property name="text">
+    <string>旋转矩形</string>
+   </property>
+  </action>
+  <action name="actionCircle">
+   <property name="text">
+    <string>最小外圆</string>
+   </property>
+  </action>
+  <action name="actionEllipse">
+   <property name="text">
+    <string>拟合椭圆</string>
+   </property>
+  </action>
+  <action name="actionLine">
+   <property name="text">
+    <string>拟合线</string>
    </property>
   </action>
  </widget>
