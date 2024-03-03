@@ -6,6 +6,7 @@ from control.action.ButtonAction import preImage, nextImage
 from control.action.FileMenuMenu import openAct, saveAct, openFilePathAct
 from control.action.GeometricTransformationMenu import resizeAct, translationAct, rotationAct, warpAffineAct, \
     warpPerspectiveAct
+from control.action.GradientMenu import laplacianAct, sobelXAct, sobelYAct
 from control.action.ImageSmoothMenu import filter2DAct, blurAct, gaussianBlurAct, medianBlurAct, bilateralFilterAct
 from control.action.ImageThresholdMenu import simpleBinaryThresholdAct, simpleTruncThresholdAct, \
     simpleBinaryInvThresholdAct, simpleToZeroThresholdAct, simpleToZeroInvThresholdAct, adaptiveMeanThresholdAct, \
@@ -27,10 +28,11 @@ class Window(QMainWindow):
         # 从文件中加载界面
         self.loadUi()
         # 关联槽函数
-        self.fileMenuConnect()
         self.buttonConnect()
-        self.geometricTransformationMenuConnect()
+        self.fileMenuConnect()
+        self.gradientConnect()
         self.imageThresholdMenuConnect()
+        self.geometricTransformationMenuConnect()
         self.morphologicalTransformationConnect()
 
     # 初始化属性
@@ -102,3 +104,9 @@ class Window(QMainWindow):
             (partial(morphologyExTopHatAct, self.model, self.ui.tabLabel1)))
         self.ui.actionMorphologyExBlackHat.triggered.connect(
             (partial(morphologyExBlackHatAct, self.model, self.ui.tabLabel1)))
+
+    # 梯度
+    def gradientConnect(self):
+        self.ui.actionLaplacian.triggered.connect((partial(laplacianAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionSobelX.triggered.connect((partial(sobelXAct, self.model, self.ui.tabLabel1)))
+        self.ui.actionSobelY.triggered.connect((partial(sobelYAct, self.model, self.ui.tabLabel1)))

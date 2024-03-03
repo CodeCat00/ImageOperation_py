@@ -552,10 +552,19 @@
      <addaction name="actionMorphologyExTopHat"/>
      <addaction name="actionMorphologyExBlackHat"/>
     </widget>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>梯度</string>
+     </property>
+     <addaction name="actionLaplacian"/>
+     <addaction name="actionSobelX"/>
+     <addaction name="actionSobelY"/>
+    </widget>
     <addaction name="menuGeometricTransformation"/>
     <addaction name="menuImageThreshold"/>
     <addaction name="menu"/>
     <addaction name="menu_2"/>
+    <addaction name="menu_3"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuOpenCV"/>
@@ -727,6 +736,21 @@
   <action name="actionMorphologyExBlackHat">
    <property name="text">
     <string>黑帽</string>
+   </property>
+  </action>
+  <action name="actionLaplacian">
+   <property name="text">
+    <string>Laplacian微分</string>
+   </property>
+  </action>
+  <action name="actionSobelX">
+   <property name="text">
+    <string>SobelX轴梯度</string>
+   </property>
+  </action>
+  <action name="actionSobelY">
+   <property name="text">
+    <string>SobelY轴梯度</string>
    </property>
   </action>
  </widget>
