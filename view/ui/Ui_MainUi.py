@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'MainUi.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.1
+## Created by: Qt User Interface Compiler version 6.8.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -25,8 +25,8 @@ class Ui_MainUi(object):
     def setupUi(self, MainUi):
         if not MainUi.objectName():
             MainUi.setObjectName(u"MainUi")
-        MainUi.resize(1728, 1051)
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        MainUi.resize(1470, 890)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainUi.sizePolicy().hasHeightForWidth())
@@ -284,17 +284,19 @@ class Ui_MainUi(object):
         self.actionEllipse.setObjectName(u"actionEllipse")
         self.actionLine = QAction(MainUi)
         self.actionLine.setObjectName(u"actionLine")
+        self.actionTest = QAction(MainUi)
+        self.actionTest.setObjectName(u"actionTest")
         self.centralWidget = QWidget(MainUi)
         self.centralWidget.setObjectName(u"centralWidget")
         self.centralWidget.setEnabled(True)
-        sizePolicy1 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Maximum, QSizePolicy.Policy.Maximum)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.centralWidget.sizePolicy().hasHeightForWidth())
         self.centralWidget.setSizePolicy(sizePolicy1)
-        self.centralWidget.setLayoutDirection(Qt.LeftToRight)
+        self.centralWidget.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
         self.centralWidget.setAutoFillBackground(False)
-        self.centralWidget.setInputMethodHints(Qt.ImhNone)
+        self.centralWidget.setInputMethodHints(Qt.InputMethodHint.ImhNone)
         self.horizontalLayout_5 = QHBoxLayout(self.centralWidget)
         self.horizontalLayout_5.setSpacing(6)
         self.horizontalLayout_5.setContentsMargins(11, 11, 11, 11)
@@ -313,7 +315,7 @@ class Ui_MainUi(object):
 
         self.openImageButtonHorizontalLayout.addWidget(self.preImageButton)
 
-        self.openImageHorizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.openImageHorizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.openImageButtonHorizontalLayout.addItem(self.openImageHorizontalSpacer)
 
@@ -328,23 +330,23 @@ class Ui_MainUi(object):
 
         self.openImageFileScroll = QScrollArea(self.centralWidget)
         self.openImageFileScroll.setObjectName(u"openImageFileScroll")
-        self.openImageFileScroll.setLayoutDirection(Qt.LeftToRight)
-        self.openImageFileScroll.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
-        self.openImageFileScroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.openImageFileScroll.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.openImageFileScroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
+        self.openImageFileScroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
         self.openImageFileScroll.setWidgetResizable(True)
-        self.openImageFileScroll.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.openImageFileScroll.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.openImageFileScrollWidget = QWidget()
         self.openImageFileScrollWidget.setObjectName(u"openImageFileScrollWidget")
-        self.openImageFileScrollWidget.setGeometry(QRect(0, 0, 840, 894))
-        self.openImageFileScrollWidget.setLayoutDirection(Qt.LeftToRight)
+        self.openImageFileScrollWidget.setGeometry(QRect(0, 0, 711, 733))
+        self.openImageFileScrollWidget.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
         self.horizontalLayout_4 = QHBoxLayout(self.openImageFileScrollWidget)
         self.horizontalLayout_4.setSpacing(6)
         self.horizontalLayout_4.setContentsMargins(11, 11, 11, 11)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.openImageFileLabel = QLabel(self.openImageFileScrollWidget)
         self.openImageFileLabel.setObjectName(u"openImageFileLabel")
-        self.openImageFileLabel.setLayoutDirection(Qt.LeftToRight)
-        self.openImageFileLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.openImageFileLabel.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.openImageFileLabel.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignTop)
 
         self.horizontalLayout_4.addWidget(self.openImageFileLabel)
 
@@ -368,14 +370,14 @@ class Ui_MainUi(object):
         self.tabScrollArea1.setWidgetResizable(True)
         self.tabInnerWidget1 = QWidget()
         self.tabInnerWidget1.setObjectName(u"tabInnerWidget1")
-        self.tabInnerWidget1.setGeometry(QRect(0, 0, 800, 879))
+        self.tabInnerWidget1.setGeometry(QRect(0, 0, 671, 718))
         self.verticalLayout = QVBoxLayout(self.tabInnerWidget1)
         self.verticalLayout.setSpacing(6)
         self.verticalLayout.setContentsMargins(11, 11, 11, 11)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.tabLabel1 = QLabel(self.tabInnerWidget1)
         self.tabLabel1.setObjectName(u"tabLabel1")
-        self.tabLabel1.setAlignment(Qt.AlignCenter)
+        self.tabLabel1.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.verticalLayout.addWidget(self.tabLabel1)
 
@@ -395,14 +397,14 @@ class Ui_MainUi(object):
         self.tabScrollArea2.setWidgetResizable(True)
         self.tabInnerWidget2 = QWidget()
         self.tabInnerWidget2.setObjectName(u"tabInnerWidget2")
-        self.tabInnerWidget2.setGeometry(QRect(0, 0, 83, 40))
+        self.tabInnerWidget2.setGeometry(QRect(0, 0, 671, 718))
         self.verticalLayout_2 = QVBoxLayout(self.tabInnerWidget2)
         self.verticalLayout_2.setSpacing(6)
         self.verticalLayout_2.setContentsMargins(11, 11, 11, 11)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.tabLabel2 = QLabel(self.tabInnerWidget2)
         self.tabLabel2.setObjectName(u"tabLabel2")
-        self.tabLabel2.setAlignment(Qt.AlignCenter)
+        self.tabLabel2.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.verticalLayout_2.addWidget(self.tabLabel2)
 
@@ -413,7 +415,7 @@ class Ui_MainUi(object):
         self.tabWidget.addTab(self.tabWidget2, "")
         self.tabWidget3 = QWidget()
         self.tabWidget3.setObjectName(u"tabWidget3")
-        self.tabWidget3.setFocusPolicy(Qt.NoFocus)
+        self.tabWidget3.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.horizontalLayout = QHBoxLayout(self.tabWidget3)
         self.horizontalLayout.setSpacing(6)
         self.horizontalLayout.setContentsMargins(11, 11, 11, 11)
@@ -423,7 +425,7 @@ class Ui_MainUi(object):
         self.scrollArea.setWidgetResizable(True)
         self.tabInnerWidget3 = QWidget()
         self.tabInnerWidget3.setObjectName(u"tabInnerWidget3")
-        self.tabInnerWidget3.setGeometry(QRect(0, 0, 83, 40))
+        self.tabInnerWidget3.setGeometry(QRect(0, 0, 671, 718))
         self.verticalLayout_3 = QVBoxLayout(self.tabInnerWidget3)
         self.verticalLayout_3.setSpacing(6)
         self.verticalLayout_3.setContentsMargins(11, 11, 11, 11)
@@ -449,7 +451,7 @@ class Ui_MainUi(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.tabInnerWidget4 = QWidget()
         self.tabInnerWidget4.setObjectName(u"tabInnerWidget4")
-        self.tabInnerWidget4.setGeometry(QRect(0, 0, 83, 40))
+        self.tabInnerWidget4.setGeometry(QRect(0, 0, 671, 718))
         self.verticalLayout_4 = QVBoxLayout(self.tabInnerWidget4)
         self.verticalLayout_4.setSpacing(6)
         self.verticalLayout_4.setContentsMargins(11, 11, 11, 11)
@@ -475,7 +477,7 @@ class Ui_MainUi(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.tabInnerWidget5 = QWidget()
         self.tabInnerWidget5.setObjectName(u"tabInnerWidget5")
-        self.tabInnerWidget5.setGeometry(QRect(0, 0, 83, 40))
+        self.tabInnerWidget5.setGeometry(QRect(0, 0, 671, 718))
         self.verticalLayout_5 = QVBoxLayout(self.tabInnerWidget5)
         self.verticalLayout_5.setSpacing(6)
         self.verticalLayout_5.setContentsMargins(11, 11, 11, 11)
@@ -496,7 +498,7 @@ class Ui_MainUi(object):
         MainUi.setCentralWidget(self.centralWidget)
         self.menuBar = QMenuBar(MainUi)
         self.menuBar.setObjectName(u"menuBar")
-        self.menuBar.setGeometry(QRect(0, 0, 1728, 37))
+        self.menuBar.setGeometry(QRect(0, 0, 1470, 37))
         self.menuFile = QMenu(self.menuBar)
         self.menuFile.setObjectName(u"menuFile")
         self.menuOpenCV = QMenu(self.menuBar)
@@ -515,16 +517,19 @@ class Ui_MainUi(object):
         self.menu_4.setObjectName(u"menu_4")
         self.menu_5 = QMenu(self.menuOpenCV)
         self.menu_5.setObjectName(u"menu_5")
+        self.menuDevelopment = QMenu(self.menuBar)
+        self.menuDevelopment.setObjectName(u"menuDevelopment")
         MainUi.setMenuBar(self.menuBar)
         self.mainToolBar = QToolBar(MainUi)
         self.mainToolBar.setObjectName(u"mainToolBar")
-        MainUi.addToolBar(Qt.TopToolBarArea, self.mainToolBar)
+        MainUi.addToolBar(Qt.ToolBarArea.TopToolBarArea, self.mainToolBar)
         self.statusBar = QStatusBar(MainUi)
         self.statusBar.setObjectName(u"statusBar")
         MainUi.setStatusBar(self.statusBar)
 
         self.menuBar.addAction(self.menuFile.menuAction())
         self.menuBar.addAction(self.menuOpenCV.menuAction())
+        self.menuBar.addAction(self.menuDevelopment.menuAction())
         self.menuFile.addAction(self.actionOpen)
         self.menuFile.addAction(self.actionSave)
         self.menuFile.addAction(self.actionOpenFilePath)
@@ -571,6 +576,7 @@ class Ui_MainUi(object):
         self.menu_5.addAction(self.actionCircle)
         self.menu_5.addAction(self.actionEllipse)
         self.menu_5.addAction(self.actionLine)
+        self.menuDevelopment.addAction(self.actionTest)
 
         self.retranslateUi(MainUi)
 
@@ -630,6 +636,7 @@ class Ui_MainUi(object):
         self.actionCircle.setText(QCoreApplication.translate("MainUi", u"\u6700\u5c0f\u5916\u5706", None))
         self.actionEllipse.setText(QCoreApplication.translate("MainUi", u"\u62df\u5408\u692d\u5706", None))
         self.actionLine.setText(QCoreApplication.translate("MainUi", u"\u62df\u5408\u7ebf", None))
+        self.actionTest.setText(QCoreApplication.translate("MainUi", u"\u5f00\u53d1\u6d4b\u8bd5", None))
         self.preImageButton.setText(QCoreApplication.translate("MainUi", u"\u4e0a\u4e00\u5f20", None))
         self.nextImageButton.setText(QCoreApplication.translate("MainUi", u"\u4e0b\u4e00\u5f20", None))
         self.openImageFileLabel.setText("")
@@ -652,5 +659,6 @@ class Ui_MainUi(object):
         self.menu_3.setTitle(QCoreApplication.translate("MainUi", u"\u68af\u5ea6", None))
         self.menu_4.setTitle(QCoreApplication.translate("MainUi", u"\u8fb9\u7f18\u68c0\u6d4b", None))
         self.menu_5.setTitle(QCoreApplication.translate("MainUi", u"\u8f6e\u5ed3", None))
+        self.menuDevelopment.setTitle(QCoreApplication.translate("MainUi", u"\u5f00\u53d1\u4e2d", None))
     # retranslateUi
 

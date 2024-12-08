@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1728</width>
-    <height>1051</height>
+    <width>1470</width>
+    <height>890</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -199,13 +199,13 @@
     </sizepolicy>
    </property>
    <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
+    <enum>Qt::LayoutDirection::LeftToRight</enum>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
    <property name="inputMethodHints">
-    <set>Qt::ImhNone</set>
+    <set>Qt::InputMethodHint::ImhNone</set>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_5">
     <item>
@@ -231,7 +231,7 @@
         <item>
          <spacer name="openImageHorizontalSpacer">
           <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+           <enum>Qt::Orientation::Horizontal</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -256,43 +256,43 @@
       <item>
        <widget class="QScrollArea" name="openImageFileScroll">
         <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
+         <enum>Qt::LayoutDirection::LeftToRight</enum>
         </property>
         <property name="verticalScrollBarPolicy">
-         <enum>Qt::ScrollBarAsNeeded</enum>
+         <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
         </property>
         <property name="horizontalScrollBarPolicy">
-         <enum>Qt::ScrollBarAsNeeded</enum>
+         <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
         </property>
         <property name="widgetResizable">
          <bool>true</bool>
         </property>
         <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
         </property>
         <widget class="QWidget" name="openImageFileScrollWidget">
          <property name="geometry">
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>840</width>
-           <height>894</height>
+           <width>711</width>
+           <height>733</height>
           </rect>
          </property>
          <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
            <widget class="QLabel" name="openImageFileLabel">
             <property name="layoutDirection">
-             <enum>Qt::LeftToRight</enum>
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
             </property>
            </widget>
           </item>
@@ -322,8 +322,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>800</width>
-             <height>879</height>
+             <width>671</width>
+             <height>718</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout">
@@ -333,7 +333,7 @@
                <string/>
               </property>
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignmentFlag::AlignCenter</set>
               </property>
              </widget>
             </item>
@@ -358,8 +358,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>83</width>
-             <height>40</height>
+             <width>671</width>
+             <height>718</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -369,7 +369,7 @@
                <string/>
               </property>
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignmentFlag::AlignCenter</set>
               </property>
              </widget>
             </item>
@@ -381,7 +381,7 @@
       </widget>
       <widget class="QWidget" name="tabWidget3">
        <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
+        <enum>Qt::FocusPolicy::NoFocus</enum>
        </property>
        <attribute name="title">
         <string>Tab3</string>
@@ -397,8 +397,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>83</width>
-             <height>40</height>
+             <width>671</width>
+             <height>718</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -430,8 +430,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>83</width>
-             <height>40</height>
+             <width>671</width>
+             <height>718</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -463,8 +463,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>83</width>
-             <height>40</height>
+             <width>671</width>
+             <height>718</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -490,7 +490,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1728</width>
+     <width>1470</width>
      <height>37</height>
     </rect>
    </property>
@@ -585,8 +585,15 @@
     <addaction name="menu_4"/>
     <addaction name="menu_5"/>
    </widget>
+   <widget class="QMenu" name="menuDevelopment">
+    <property name="title">
+     <string>开发中</string>
+    </property>
+    <addaction name="actionTest"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuOpenCV"/>
+   <addaction name="menuDevelopment"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -805,6 +812,11 @@
   <action name="actionLine">
    <property name="text">
     <string>拟合线</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="text">
+    <string>开发测试</string>
    </property>
   </action>
  </widget>

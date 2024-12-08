@@ -4,6 +4,7 @@ from PySide6.QtWidgets import QMainWindow, QApplication
 
 from control.action.ButtonAction import *
 from control.action.ContourMenu import *
+from control.action.DevelopmentMenu import testAct
 from control.action.EdgeDetectionMenu import *
 from control.action.FileMenuMenu import *
 from control.action.GeometricTransformationMenu import *
@@ -34,6 +35,7 @@ class Window(QMainWindow):
         self.imageThresholdMenuConnect()
         self.geometricTransformationMenuConnect()
         self.morphologicalTransformationConnect()
+        self.DevelopmentConnect()
 
     # 初始化属性
     def initAttribute(self):
@@ -123,3 +125,7 @@ class Window(QMainWindow):
         self.ui.actionCircle.triggered.connect((partial(circleAct, self.model, self.ui.tabLabel1)))
         self.ui.actionEllipse.triggered.connect((partial(ellipseAct, self.model, self.ui.tabLabel1)))
         self.ui.actionLine.triggered.connect((partial(lineAct, self.model, self.ui.tabLabel1)))
+
+    # 开发中
+    def DevelopmentConnect(self):
+        self.ui.actionTest.triggered.connect((partial(testAct, self.model, self.ui.tabLabel1)))
