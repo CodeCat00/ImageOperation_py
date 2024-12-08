@@ -358,8 +358,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>671</width>
-             <height>718</height>
+             <width>98</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -397,8 +397,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>671</width>
-             <height>718</height>
+             <width>98</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -430,8 +430,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>671</width>
-             <height>718</height>
+             <width>98</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -463,8 +463,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>671</width>
-             <height>718</height>
+             <width>98</width>
+             <height>40</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -637,6 +637,9 @@
   <action name="actionOpenFilePath">
    <property name="text">
     <string>读取文件夹</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
    </property>
   </action>
   <action name="actionResize">

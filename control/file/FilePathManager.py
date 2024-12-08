@@ -9,8 +9,10 @@ from model.file.ImageFileModel import ImageFileModel
 def fetchFilePathModel():
     # 变量
     imageFiles = []
+    # 设置默认路径
+    default_path = "/Users/pengjiang/Desktop/image/duplicate"
     # 用户选择文件
-    filePath = QFileDialog.getExistingDirectory(None, '选择文件夹')
+    filePath = QFileDialog.getExistingDirectory(None, '选择文件夹', default_path)
     if filePath is None:
         return
     # 筛选出所有图片文件路径集合
