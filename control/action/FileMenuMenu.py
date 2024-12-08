@@ -11,6 +11,10 @@ from model.image.ImageModel import ImageModel
 def openAct(model=ImageOperationModel, label=QLabel):
     # 选择文件
     imageFile, _ = QFileDialog.getOpenFileNames(None, 'Open Images', '', 'Image files (*.png *.jpg *.jpeg)')
+    # 校验是否为空
+    if not imageFile:  # 如果列表为空
+        print("No file selected.")
+        return
     # 读取图片
     imageModel = ImageModel(imageFile[0])
     # 显示图片
